@@ -1,0 +1,112 @@
+$fa-font-path: "node_modules/font-awesome/fonts";
+@import "node_modules/font-awesome/css/font-awesome";
+
+$primary: #012841;
+$blue: $primary;
+
+@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/sass/elements/icon";
+@import "node_modules/bulma/bulma";
+@import "node_modules/bulma/sass/components/_all";
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    min-height: 100vh;
+    height: 100vh;
+}
+
+a {
+    color: $primary;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    box-shadow: 0 1px 10px #333;
+    position: relative;
+    z-index: 10;
+}
+
+.header-toolbar {
+    background-color: $primary;
+    height: 40px;
+    padding-top: 1em;
+}
+
+.navbar-brand {
+    height: auto;
+    min-height: 7rem;
+    max-height: 7rem;
+}
+
+.navbar-brand a img, .navbar-item img {
+    height: 6rem;
+    max-height: 6rem;
+    width: 15rem;
+}
+
+.navbar-item:hover, .navbar-link:hover, a.navbar-item:hover, a.navbar-link:hover {
+    color: $primary;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.hero {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero.banner-commitment {
+    background-image: url("/img/banner-commitment-min.jpg");
+}
+
+.hero.banner-project {
+    background-image: url("/img/banner-project-min.jpg");
+}
+
+.hero.banner-product {
+    background-image: url("/img/banner-product-min.jpg");
+}
+
+.certificates .image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.iframe-googlemaps {
+    border: none;
+    height: 300px;
+    width: 100%;
+    max-width: 100%;
+}
+
+footer.footer {
+    bottom: 0;
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+footer.footer h3.title {
+    font-size: .85rem;
+}
+
+footer.footer p, footer.footer ul {
+    font-size: .8rem;
+}

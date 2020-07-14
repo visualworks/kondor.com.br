@@ -10,35 +10,29 @@ export default class ViewProducts extends App {
             <h2 className="title">Qualidade</h2>
             <p>A KONDOR tem difundido a consciência ambiental e noções de que legislações e normas devem ser rigorosamente cumpridas para minimizar e evitar impactos e reações de degradação ao meio ambiente, que poderiam ser provocadas por atividades industriais. Continuaremos sempre nessa busca pois acreditamos num futuro melhor para as futuras gerações. Busca pela qualidade, atender necessidades e satisfazer o cliente significa fabricar produtos que respondam e superem quaisquer expectativas. Para a KONDOR é indispensável dispor de processos confiáveis, previsíveis e guiados por boas práticas gerenciais, garantindo assim um ótimo nível de excelência. Nesse sentido a KONDOR está sempre em busca de atualização por processos de melhoria e qualidade.</p>
             <div className="columns certificates">
-                <div className="column">
+                <div className="column has-text-centered">
                     <figure className="image is-128x128">
-                        <img src="/img/certificate-ISO-TS-16949-LRQA-min.jpg" alt="ISO/TS 16949 LRQA" title="ISO/TS 16949 LRQA" />
+                        <img src="/img/certificates/IATF-16949-CERTIFIED-positive-RGB.jpg" alt="IATF 16949" title="IATF 16949" />
                     </figure>
+                    <p>
+                        <a href="/img/certificates/pdf/00005825-001-16949-ENGUS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/00005825-001-16949-PORBR.pdf" target="_blank">Português</a>
+                    </p>
                 </div>
-                <div className="column">
+                <div className="column has-text-centered">
                     <figure className="image is-128x128">
-                        <a href="/img/certificate-kondor-iso-ts.png" target="_blank"><img src="/img/certificate-kondor-iso-ts.png" alt="ISO/TS 16949 LRQA" title="ISO/TS 16949 LRQA" /></a>
+                        <img src="/img/certificates/ISO-9001-positive-screen-RGB.jpg" alt="ISO 9001" title="ISO 9001" />
                     </figure>
+                    <p>
+                        <a href="/img/certificates/pdf/0010508-999-QMS-ENGUS-UKAS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/0010508-999-QMS-PORBR-UKAS.pdf" target="_blank">Português</a>
+                    </p>
                 </div>
-                <div className="column">
+                <div className="column has-text-centered">
                     <figure className="image is-128x128">
-                        <img src="/img/certificate-ISO9001-LRQA-min.jpg" alt="ISO 9001 LRQA" title="ISO 9001 LRQA" />
+                        <img src="/img/certificates/ISO-14001-positive-screen-RGB.jpg" alt="ISO 14001" title="ISO 14001" />
                     </figure>
-                </div>
-                <div className="column">
-                    <figure className="image is-128x128">
-                        <a href="/img/certificate-kondor-iso-9001.png" target="_blank"><img src="/img/certificate-kondor-iso-9001.png" alt="ISO 14001 LRQA" title="ISO 14001 LRQA" /></a>
-                    </figure>
-                </div>
-                <div className="column">
-                    <figure className="image is-128x128">
-                        <img src="/img/certificate-ISO14001-LRQA-min.jpg" alt="ISO 14001 LRQA" title="ISO 14001 LRQA" />
-                    </figure>
-                </div>
-                <div className="column">
-                    <figure className="image is-128x128">
-                        <a href="/img/certificate-kondor-iso-14001.jpg" target="_blank"><img src="/img/certificate-kondor-iso-14001.jpg" alt="ISO 9001 LRQA" title="ISO 9001 LRQA" /></a>
-                    </figure>
+                    <p>
+                        <a href="/img/certificates/pdf/Certificado-ISO-14001-ING.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/Certificado-ISO-14001-PT-BR.pdf" target="_blank">Português</a>
+                    </p>
                 </div>
             </div>
             <h2 className="title">Certificações</h2>

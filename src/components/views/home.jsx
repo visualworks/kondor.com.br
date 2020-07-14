@@ -37,17 +37,17 @@ export default class ViewHome extends App {
         let homeQuality = (<div className="columns certificates">
             <div className="column">
                 <figure className="image is-128x128">
-                    <img src="/img/certificate-ISO-TS-16949-LRQA-min.jpg" alt="ISO/TS 16949 LRQA" title="ISO/TS 16949 LRQA" />
+                    <img src="/img/certificates/IATF-16949-CERTIFIED-positive-RGB.jpg" alt="IATF 16949 - CERTIFIED" title="IATF 16949 - CERTIFIED" />
                 </figure>
             </div>
             <div className="column">
                 <figure className="image is-128x128">
-                    <img src="/img/certificate-ISO9001-LRQA-min.jpg" alt="ISO 9001 LRQA" title="ISO 9001 LRQA" />
+                    <img src="/img/certificates/ISO-9001-positive-screen-RGB.jpg" alt="ISO 9001" title="ISO 9001" />
                 </figure>
             </div>
             <div className="column">
                 <figure className="image is-128x128">
-                    <img src="/img/certificate-ISO14001-LRQA-min.jpg" alt="ISO 14001 LRQA" title="ISO 14001 LRQA" />
+                    <img src="/img/certificates/ISO-14001-positive-screen-RGB.jpg" alt="ISO 14001" title="ISO 14001" />
                 </figure>
             </div>
         </div>);

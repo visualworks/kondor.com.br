@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -48,7 +48,7 @@ module.exports = {
         hints: "warning",
         maxAssetSize: 700000,
         maxEntrypointSize: 700000,
-        assetFilter: function(assetFilename) {
+        assetFilter: function (assetFilename) {
             return assetFilename.endsWith(".css") || assetFilename.endsWith(".js");
         }
     },
@@ -64,13 +64,13 @@ module.exports = {
         }
     },
     target: "web",
-    stats: "detailed",
+    // stats: "detailed",
     plugins: [
-        new webpack.DefinePlugin({
-            "process.env": {
-                MAP_ACCESS_KEY: JSON.stringify(process.env.MAP_ACCESS_KEY)
-            }
-        }),
+        // new webpack.DefinePlugin({
+        //     "process.env": {
+        //         MAP_ACCESS_KEY: JSON.stringify(process.env.MAP_ACCESS_KEY)
+        //     }
+        // }),
         new UglifyJsPlugin(),
         new HTMLWebpackPlugin({
             title: "Kondor - Empresa de Usinagem e Tecnologia em Mecânica",
@@ -81,18 +81,20 @@ module.exports = {
             filename: path.resolve(__dirname, "dist/index.html"),
             template: path.resolve(__dirname, "src/index.html")
         }),
-        new CopyWebpackPlugin([
+        new CopyWebpackPlugin(
             {
-                from: path.resolve(__dirname, "src/img"),
-                to: path.resolve(__dirname, "dist/img")
+                patterns: [
+                    {
+                        from: path.resolve(__dirname, "src/img"),
+                        to: path.resolve(__dirname, "dist/img")
+                    },
+                    {
+                        from: path.resolve(__dirname, "src/fonts"),
+                        to: path.resolve(__dirname, "dist/fonts")
+                    }
+                ]
             }
-        ]),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, "src/fonts"),
-                to: path.resolve(__dirname, "dist/fonts")
-            }
-        ])
+        )
     ],
     // advanced
     parallelism: 2,

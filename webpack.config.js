@@ -1,7 +1,7 @@
 const path = require("path");
 // const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -25,15 +25,15 @@ module.exports = {
                     path.resolve(__dirname, "src")
                 ],
                 exclude: /node_modules/,
-                loader: ["style-loader", "css-loader", "sass-loader"]
+                use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                loader: ["file-loader"]
+                use: ["file-loader"]
             },
             {
                 test: /\.(jpeg|jpg|gif|png|svg)(\?.*$|$)/,
-                loader: ["file-loader?name=/img/[name].[ext]"]
+                use: ["file-loader?name=/img/[name].[ext]"]
             }
         ]
     },
@@ -53,6 +53,13 @@ module.exports = {
         }
     },
     optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+                test: /\.js(\?.*)?$/i
+            }),
+        ],
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -71,7 +78,6 @@ module.exports = {
         //         MAP_ACCESS_KEY: JSON.stringify(process.env.MAP_ACCESS_KEY)
         //     }
         // }),
-        new UglifyJsPlugin(),
         new HTMLWebpackPlugin({
             title: "Kondor - Empresa de Usinagem e Tecnologia em Mecânica",
             author: "Visual Works",

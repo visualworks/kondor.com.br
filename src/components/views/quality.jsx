@@ -15,7 +15,9 @@ export default class ViewProducts extends App {
                         <img src="/img/certificates/IATF-16949-CERTIFIED-positive-RGB.jpg" alt="IATF 16949" title="IATF 16949" />
                     </figure>
                     <p>
-                        <a href="/img/certificates/pdf/00005825-001-16949-ENGUS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/00005825-001-16949-PORBR.pdf" target="_blank">Português</a>
+                        <a href="/img/certificates/pdf/00005825-001-16949-ENGUS-IATF.pdf" target="_blank">English</a>
+                        &nbsp;|&nbsp;
+                        <a href="/img/certificates/pdf/00005825-001-16949-PORBR-IATF.pdf" target="_blank">Português</a>
                     </p>
                 </div>
                 <div className="column has-text-centered">

@@ -5,6 +5,16 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+    devServer: {
+        compress: true,
+        liveReload: true,
+        allowedHosts: "all",
+        port: 9000,
+        static: {
+            directory: path.join(__dirname, 'dist'),
+            watch: true
+        }
+    },
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist/"),

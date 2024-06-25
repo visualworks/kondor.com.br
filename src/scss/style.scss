@@ -1,13 +1,13 @@
-$fa-font-path: "node_modules/font-awesome/fonts";
-@import "node_modules/font-awesome/css/font-awesome";
+$fa-font-path: "@fortawesome/fontawesome-free/fonts/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
 
 $primary: #012841;
 $blue: $primary;
 
-@import "node_modules/bulma/sass/utilities/initial-variables";
-@import "node_modules/bulma/sass/elements/icon";
-@import "node_modules/bulma/bulma";
-@import "node_modules/bulma/sass/components/_all";
+//@import "bulma/sass/utilities/initial-variables";
+//@import "bulma/sass/elements/icon";
+//@import "bulma/bulma";
+@import "bulma/sass/index";
 
 html, body {
     height: 100%;

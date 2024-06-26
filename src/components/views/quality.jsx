@@ -33,7 +33,7 @@ export default class ViewProducts extends App {
                         <img src="/img/certificates/ISO-14001-positive-screen-RGB.jpg" alt="ISO 14001" title="ISO 14001" />
                     </figure>
                     <p>
-                        <a href="/img/certificates/pdf/Certificado-ISO-14001-ING.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/Certificado-ISO-14001-PT-BR.pdf" target="_blank">Português</a>
+                        <a href="/img/certificates/pdf/00008762-EMS-ENGUS-UKAS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/00008762-EMS-PORBR-UKAS.pdf" target="_blank">Português</a>
                     </p>
                 </div>
             </div>

@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A Indústria Mecânica Kondor atua no mercado há mais de 40 anos, prestando serviços de usinagem de alta-precisão destinadas à montadoras de veículos pesados, como tratores, caminhões e implementos agrícolas, bem como o setor automotivo e usinagem em geral.",
   "main": "src/index.js",
+  "engines": {
+    "node": ">=20.12.2",
+    "npm": ">=10.5.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "start": "NODE_ENV=development webpack serve --config webpack.config.js --progress --mode development",
     "build": "NODE_ENV=production webpack --config webpack.config.js --mode production",

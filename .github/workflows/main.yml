@@ -33,7 +33,6 @@ jobs:
     - name: Generate build package
       run: |
         npm ci
-        sed -i '0,/^/s//@import "..\/utilities\/mixins"\n/' node_modules/bulma/sass/elements/icon.sass
         npm run build
     - uses: jakejarvis/s3-sync-action@master
       with:

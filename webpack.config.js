@@ -30,12 +30,31 @@ module.exports = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.(css|scss|sass)$/,
-                    include: [
-                        path.resolve(__dirname, "src")
-                    ],
-                    exclude: /node_modules/,
-                    use: ["style-loader", "css-loader", "sass-loader"]
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                        // Creates `style` nodes from JS strings
+                        "style-loader",
+                        // Translates CSS into CommonJS
+                        {
+                            loader: "css-loader",
+                            options: {
+                                url: false
+                            }
+                        },
+                        // Compiles Sass to CSS
+                        "resolve-url-loader",
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                // This is needed for resolve-url-loader to work!
+                                // https://github.com/bholloway/resolve-url-loader/issues/212#issuecomment-1011630220
+                                sourceMap: true,
+                                sassOptions: {
+                                    includePaths: [path.resolve(__dirname, 'node_modules')],
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -43,7 +62,8 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(jpeg|jpg|gif|png|svg)(\?.*$|$)/,
-                    use: ["file-loader?name=/img/[name].[ext]"]
+                    loader: "file-loader",
+                    type: "asset/resource"
                 }
             ]
         },

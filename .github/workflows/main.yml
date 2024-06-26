@@ -32,7 +32,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate build package
       run: |
-        npm install
+        npm ci
         sed -i '0,/^/s//@import "..\/utilities\/mixins"\n/' node_modules/bulma/sass/elements/icon.sass
         npm run build
     - uses: jakejarvis/s3-sync-action@master

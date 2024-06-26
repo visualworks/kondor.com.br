@@ -62,8 +62,7 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.(jpeg|jpg|gif|png|svg)(\?.*$|$)/,
-                    loader: "file-loader",
-                    type: "asset/resource"
+                    loader: "file-loader"
                 }
             ]
         },

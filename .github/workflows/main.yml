@@ -12,7 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
+  build-and-deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
     if: github.ref == 'refs/heads/main'
@@ -27,34 +27,24 @@ jobs:
           node-version: '20.12.2'
       - run: npm ci
       - run: npm run build
-  deploy:
-    runs-on: ubuntu-24.04
-    if: github.ref == 'refs/heads/main'
-    steps:
-#    - name: Git Checkout
-#      uses: actions/checkout@master
-#    - name: Generate build package
-#      run: |
-#        npm ci
-#        npm run build
-#      # Upload to S3
-    - name: AWS Sync S3 Bucket
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY }}
-        AWS_REGION: ${{ secrets.AWS_S3_REGION }}
-        SOURCE_DIR: ${{ secrets.SOURCE_DIR }}
-        DEST_DIR: ''
-    # Invalidate CloudFront
-    - name: AWS Invalidate CloudFront
-      uses: chetan/invalidate-cloudfront-action@v2
-      env:
-        DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION }}
-        PATHS: "/*"
-        AWS_REGION: ${{ secrets.AWS_REGION }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY }}
+      # Upload to S3
+      - name: AWS Sync S3 Bucket
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_S3_REGION }}
+          SOURCE_DIR: ${{ secrets.SOURCE_DIR }}
+          DEST_DIR: ''
+      # Invalidate CloudFront
+      - name: AWS Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION }}
+          PATHS: "/*"
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY }}

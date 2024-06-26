@@ -11,8 +11,8 @@ export default class ViewProducts extends App {
             <p>A KONDOR tem difundido a consciência ambiental e noções de que legislações e normas devem ser rigorosamente cumpridas para minimizar e evitar impactos e reações de degradação ao meio ambiente, que poderiam ser provocadas por atividades industriais. Continuaremos sempre nessa busca pois acreditamos num futuro melhor para as futuras gerações. Busca pela qualidade, atender necessidades e satisfazer o cliente significa fabricar produtos que respondam e superem quaisquer expectativas. Para a KONDOR é indispensável dispor de processos confiáveis, previsíveis e guiados por boas práticas gerenciais, garantindo assim um ótimo nível de excelência. Nesse sentido a KONDOR está sempre em busca de atualização por processos de melhoria e qualidade.</p>
             <div className="columns certificates">
                 <div className="column has-text-centered">
-                    <figure className="image is-128x128">
-                        <img src="/img/certificates/IATF-16949-CERTIFIED-positive-RGB.jpg" alt="IATF 16949" title="IATF 16949" />
+                    <figure className="image is-square">
+                        <img src="/img/certificates/certificate-IATF-16949-2016.jpg" alt="IATF 16949" title="IATF 16949" />
                     </figure>
                     <p>
                         <a href="/img/certificates/pdf/00005825-001-16949-ENGUS-IATF.pdf" target="_blank">English</a>
@@ -20,16 +20,16 @@ export default class ViewProducts extends App {
                         <a href="/img/certificates/pdf/00005825-001-16949-PORBR-IATF.pdf" target="_blank">Português</a>
                     </p>
                 </div>
+                {/*<div className="column has-text-centered">*/}
+                {/*    <figure className="image is-128x128">*/}
+                {/*        <img src="/img/certificates/ISO-9001-positive-screen-RGB.jpg" alt="ISO 9001" title="ISO 9001" />*/}
+                {/*    </figure>*/}
+                {/*    <p>*/}
+                {/*        <a href="/img/certificates/pdf/0010508-999-QMS-ENGUS-UKAS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/0010508-999-QMS-PORBR-UKAS.pdf" target="_blank">Português</a>*/}
+                {/*    </p>*/}
+                {/*</div>*/}
                 <div className="column has-text-centered">
-                    <figure className="image is-128x128">
-                        <img src="/img/certificates/ISO-9001-positive-screen-RGB.jpg" alt="ISO 9001" title="ISO 9001" />
-                    </figure>
-                    <p>
-                        <a href="/img/certificates/pdf/0010508-999-QMS-ENGUS-UKAS.pdf" target="_blank">English</a> | <a href="/img/certificates/pdf/0010508-999-QMS-PORBR-UKAS.pdf" target="_blank">Português</a>
-                    </p>
-                </div>
-                <div className="column has-text-centered">
-                    <figure className="image is-128x128">
+                    <figure className="image is-square">
                         <img src="/img/certificates/ISO-14001-positive-screen-RGB.jpg" alt="ISO 14001" title="ISO 14001" />
                     </figure>
                     <p>

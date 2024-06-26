@@ -135,6 +135,6 @@ module.exports = (env, argv) => {
         devtool: (env.mode === "development") ? "inline-source-map" : false,
         parallelism: 4,
         profile: true,
-        cache: (env.mode !== "development")
+        cache: false
     }
 };

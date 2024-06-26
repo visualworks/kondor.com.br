@@ -10,7 +10,7 @@
   "engineStrict": true,
   "scripts": {
     "start": "NODE_ENV=development webpack serve --config webpack.config.js --progress --mode development",
-    "build": "NODE_ENV=production webpack --config webpack.config.js --mode production",
+    "build": "NODE_ENV=production webpack --config webpack.config.js --progress --mode production",
     "test": "start-test"
   },
   "repository": {

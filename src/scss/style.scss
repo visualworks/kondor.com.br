@@ -1,10 +1,9 @@
 $fa-font-path: "@fortawesome/fontawesome-free/fonts/fontawesome";
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "bulma/sass/index";
 
 $primary: #012841;
 $blue: $primary;
-
-@import "bulma/sass/index";
 
 html, body {
     height: 100%;

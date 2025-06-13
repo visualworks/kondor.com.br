@@ -4,8 +4,8 @@
   "description": "A Indústria Mecânica Kondor atua no mercado há mais de 40 anos, prestando serviços de usinagem de alta-precisão destinadas à montadoras de veículos pesados, como tratores, caminhões e implementos agrícolas, bem como o setor automotivo e usinagem em geral.",
   "main": "src/index.js",
   "engines": {
-    "node": ">=20.12.2",
-    "npm": ">=10.5.0"
+    "node": ">=22.9.0",
+    "npm": ">=10.8.3"
   },
   "engineStrict": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
-    "@mapbox/point-geometry": "^0.1.0",
+    "@mapbox/point-geometry": "^1.1.0",
     "babel-loader": "^10.0.0",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
@@ -37,7 +37,7 @@
     "css-loader": "^7.1.2",
     "env-cmd": "^10.1.0",
     "file-loader": "^6.2.0",
-    "google-map-react": "^2.2.1",
+    "google-map-react": "^2.2.5",
     "html-webpack-plugin": "^5.6.3",
     "http-serve": "^1.0.1",
     "resolve-url-loader": "^5.0.0",
